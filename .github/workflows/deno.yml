@@ -33,7 +33,7 @@ jobs:
         with:
           push: false
           context: ${{ github.workflow }}
-          platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/ppc64le,linux/s390x
+          platforms: linux/amd64,linux/arm64
           #platforms: linux/amd64
           build-args: DENO_VERSION
           cache-from: type=gha, scope=${{ github.workflow }}
