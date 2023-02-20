@@ -38,7 +38,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          push: false
+          push: true
           context: ${{ github.workflow }}
           platforms: linux/amd64,linux/arm64
           #platforms: linux/amd64
