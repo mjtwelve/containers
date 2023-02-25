@@ -16,7 +16,7 @@ permissions: write-all
 jobs:
   update-yamls:
     runs-on: ubuntu-22.04
-    
+
       - name: Harden Runner
         uses: step-security/harden-runner@c8454efe5d0bdefd25384362fe217428ca277d57 # v2.2.0
         with:
@@ -33,4 +33,4 @@ jobs:
 
       - name: Update dependencies
         run: |
-          _utils/update_deno.sh
+          PAT="${{ github.actor }}/${{ secrets.GITHUB_READ_TOKEN }}" _utils/update_deno.sh

@@ -8,7 +8,7 @@ git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 git config pull.rebase false
 
 
-rver=$(curl -sL "https://api.github.com/repos/denoland/deno/releases/latest" | yq '.tag_name')
+rver=$(curl -sL -u "$PAT" "https://api.github.com/repos/denoland/deno/releases/latest" | yq '.tag_name')
 
 [ -z "$rver" ] && exit 1
 [[ $rver = null ]] && exit 1
