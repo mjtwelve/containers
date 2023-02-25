@@ -3,6 +3,11 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+git config user.name "github-actions[bot]"
+git config user.email "github-actions[bot]@users.noreply.github.com"
+git config pull.rebase false
+
+
 rver=$(curl -sL "https://api.github.com/repos/denoland/deno/releases/latest" | yq '.tag_name')
 
 [ -z "$rver" ] && exit 1
