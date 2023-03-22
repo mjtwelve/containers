@@ -42,4 +42,4 @@ COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod 755 /usr/local/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["/tini", "--", "docker-entrypoint.sh"]
-CMD ["run", "https://deno.land/std/examples/welcome.ts"]
+CMD ["--help"]
