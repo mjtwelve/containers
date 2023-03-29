@@ -2,7 +2,7 @@ name: deno
 on:
   workflow_dispatch:
 env:
-  DENO_VERSION: "1.31.3"
+  DENO_VERSION: "1.32.1"
   DOCKER_CLI_EXPERIMENTAL: enabled
   REPOSITORY: ${{ github.actor }}/${{ github.workflow }}
 permissions: read-all
